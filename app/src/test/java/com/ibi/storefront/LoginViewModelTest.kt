@@ -106,6 +106,8 @@ class LoginViewModelTest {
 
         override suspend fun logout() = Unit
 
+        override suspend fun lockSessionIfNeeded() = Unit
+
         override suspend fun createBiometricEnrollmentCipher(): Result<Cipher> {
             return Result.failure(IllegalStateException("not supported"))
         }
